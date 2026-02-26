@@ -1,0 +1,378 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday JYOTI ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+--accent:#ff4d6d;
+--gold:#ffd700;
+--bg:#0d0d0d;
+--pink-light:#ffb3c1;
+--cream: #fff5f8;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Montserrat', sans-serif;
+background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+color:#fff;
+overflow-x:hidden;
+scroll-behavior:smooth;
+}
+
+/* START SCREEN */
+#start-screen{
+position:fixed;
+inset:0;
+background:radial-gradient(circle at center,#ff4d6d,#000);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:9999;
+cursor:pointer;
+text-align:center;
+}
+#start-text{
+font-size:1.8rem;
+letter-spacing: 2px;
+}
+#start-text strong{
+font-size:3.5rem;
+color:#fff;
+font-family: 'Playfair Display', serif;
+display: block;
+margin-top: 10px;
+}
+
+/* HERO */
+#hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=2070&auto=format&fit=crop');
+background-size:cover;
+}
+#hero h1{
+font-family:'Playfair Display', serif;
+font-size:clamp(3rem,8vw,6rem);
+color:var(--accent);
+text-shadow:0 0 30px rgba(255,77,109,0.8);
+font-weight: 900;
+}
+
+/* CAKE */
+.cake-container {
+    position: relative;
+    padding: 40px;
+}
+.cake{
+position:relative;
+width:260px;
+height:200px;
+margin:60px auto;
+cursor:pointer;
+}
+.layer{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+border-radius:15px 15px 5px 5px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+.layer-bottom{width:240px;height:80px;bottom:0;background:#8d5524;}
+.layer-middle{width:190px;height:70px;bottom:80px;background:#c68642;}
+.layer-top{width:140px;height:60px;bottom:150px;background:#e0ac69;}
+
+.cream {
+    position: absolute;
+    width: 100%;
+    height: 15px;
+    background: var(--cream);
+    top: 0;
+    border-radius: 15px 15px 0 0;
+    border-bottom: 3px dashed #f1d5da;
+}
+
+.gem {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.candle{
+position:absolute;
+width:8px;
+height:40px;
+background:linear-gradient(to bottom, #fff, #ffd1dc);
+border-radius:4px;
+z-index: 10;
+}
+.flame{
+width:12px;
+height:22px;
+background:radial-gradient(#fff700, #ff4500);
+border-radius:50% 50% 20% 20%;
+position:absolute;
+z-index: 11;
+animation:flicker .15s infinite alternate;
+box-shadow: 0 0 10px #ff8c00;
+}
+@keyframes flicker{
+from{transform:scale(1) rotate(-1deg)}
+to{transform:scale(1.1) rotate(1deg)}
+}
+
+.balloon{
+position:fixed;
+bottom:-100px;
+font-size:45px;
+animation:floatBalloon 8s ease-in infinite;
+z-index: 1;
+opacity: 0.8;
+}
+@keyframes floatBalloon{
+0%{transform:translateY(0) rotate(0deg); opacity:1;}
+100%{transform:translateY(-120vh) rotate(20deg); opacity:0;}
+}
+
+#typewriter{
+font-size:1.4rem;
+padding:30px;
+line-height: 1.8;
+color:#ffe5ec;
+min-height:150px;
+max-width:850px;
+margin:auto;
+background: rgba(255,255,255,0.05);
+border-radius: 20px;
+border: 1px solid rgba(255,77,109,0.3);
+}
+
+.video-section{ padding:50px; text-align:center; }
+.video-section video{
+width:90%;
+max-width:600px;
+border-radius:15px;
+border: 4px solid var(--accent);
+margin:20px;
+}
+
+footer{
+text-align:center;
+padding:100px 20px;
+background:linear-gradient(transparent, #1a001f);
+}
+footer p:last-child{
+font-family:'Playfair Display', serif;
+font-size:2.8rem;
+color:var(--gold);
+margin-top: 15px;
+}
+
+.controls{ position:fixed; bottom:20px; left:20px; z-index: 1000; display:flex; gap:10px; }
+.btn{
+padding:12px 25px;
+border:none;
+border-radius:50px;
+background:var(--accent);
+color:#fff;
+cursor:pointer;
+font-weight:bold;
+box-shadow: 0 4px 15px rgba(255,77,109,0.4);
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+}
+</style>
+</head>
+
+<body>
+
+<div id="start-screen" onclick="startSurprise()">
+<div id="start-text">
+TAP TO UNVEIL THE MAGIC FOR<br>
+<strong>JYOTI ❤️</strong>
+</div>
+</div>
+
+<div id="main-content" style="display:none;">
+
+<section id="hero">
+<h1>Happy Birthday, JYOTI!</h1>
+<p style="letter-spacing: 5px; font-weight: 300;">CELEBRATING YOU TODAY</p>
+</section>
+
+<section class="cake-container" style="text-align:center;">
+<h2 style="color:var(--pink-light); font-family: 'Playfair Display'; font-size: 2.5rem; margin-bottom: 10px;">Blow the Candle & Make a Wish ✨</h2>
+
+<div class="cake" onclick="blowCandle()">
+    <div class="layer layer-bottom"><div class="cream"></div></div>
+    <div class="layer layer-middle"><div class="cream"></div></div>
+    <div class="layer layer-top">
+        <div class="cream"></div>
+        <div class="gem" style="background:red; top:5px; left:20px;"></div>
+        <div class="gem" style="background:blue; top:10px; left:50px;"></div>
+        <div class="gem" style="background:green; top:5px; left:80px;"></div>
+        <div class="gem" style="background:yellow; top:12px; left:110px;"></div>
+    </div>
+
+    <div class="candle" style="left:30% ; bottom:200px"></div>
+    <div class="flame" id="f1" style="left:29% ; bottom:240px"></div>
+
+    <div class="candle" style="left:40% ; bottom:210px"></div>
+    <div class="flame" id="f2" style="left:39% ; bottom:250px"></div>
+
+    <div class="candle" style="left:50% ; bottom:215px"></div>
+    <div class="flame" id="f3" style="left:49% ; bottom:255px"></div>
+
+    <div class="candle" style="left:60% ; bottom:210px"></div>
+    <div class="flame" id="f4" style="left:59% ; bottom:250px"></div>
+
+    <div class="candle" style="left:70% ; bottom:200px"></div>
+    <div class="flame" id="f5" style="left:69% ; bottom:240px"></div>
+</div>
+
+<p id="wish-msg" style="display:none;color:var(--gold);font-size:1.8rem;margin-top:20px;max-width:80%;margin-left:auto;margin-right:auto;font-weight:bold; text-shadow: 2px 2px 4px #000;">
+🎉 Timro dherai pragati hos. Timro aanuhar ma sadai khushi hos! 🎂
+</p>
+<button id="new-wish-btn" class="btn" style="display:none; margin:20px auto;" onclick="generateNewWish()">✨ Generate New Wish</button>
+</section>
+
+<section style="text-align:center;padding:50px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+
+<section class="video-section">
+<video controls src="Jyoti_rai.mp4"></video>
+
+
+<section style="text-align:center;padding:80px 20px;">
+<h2 style="font-family:'Playfair Display';font-size:3.5rem;color:var(--accent); margin-bottom: 30px;">To My Dearest...</h2>
+<div id="typewriter"></div>
+</section>
+
+<footer>
+<p style="font-size: 1.2rem; opacity: 0.8;">I am the one who loves you the most. No matter what, I'm here. ❤️</p>
+<p>Forever Yours, Prince.</p>
+</footer>
+
+<div class="controls">
+<button class="btn" onclick="toggleMusic()">⏸️ MUSIC</button>
+</div>
+
+</div>
+
+<audio id="bg-music" src= "Background_music.mp3" loop></audio>
+<audio id="bday-song" src="Birthday_song.mp3"></audio>
+
+<script>
+const music=document.getElementById("bg-music");
+const bdaySong=document.getElementById("bday-song");
+
+const additionalWishes = [
+    "🎉 Deraii na risaunu  Aafno Boyfriend lai deraii maya garnu Boyfriend lehh vaneko man nu Boufriend lai deraii dukha na dinu Ghar mahh mummy lehh vanekk man nu  ! 🎂",
+    "✨ Aafno bf laii deraii maya garnu maileh vaneko man nu deraii na risau nu dukha nadinu malai  ❤️",
+    "🎂 Harek sapana pura hos, harek paila ma safalta milos. Dear Mayaa! 🌹",
+    "🌈 Padnu deraii mobile na hernu natrwh SEE mahh fail vainxahh ! 🎈",
+    "💖 Timilai sansar ko sabai khushi milos, Happy Birthday to the most special person! 🥂"
+];
+
+function startSurprise(){
+    document.getElementById("start-screen").style.display="none";
+    document.getElementById("main-content").style.display="block";
+    music.volume = 0.4;
+    music.play();
+    startTypewriter();
+    createBalloons();
+}
+
+function blowCandle(){
+    for(let i=1;i<=5;i++){
+        document.getElementById("f"+i).style.opacity="0";
+        document.getElementById("f"+i).style.transition="opacity 0.5s";
+    }
+    document.getElementById("wish-msg").style.display="block";
+    document.getElementById("new-wish-btn").style.display="inline-block";
+    
+    music.pause();
+    bdaySong.currentTime = 0;
+    bdaySong.play();
+    createConfetti();
+}
+
+function generateNewWish() {
+    const msgElement = document.getElementById("wish-msg");
+    const randomWish = additionalWishes[Math.floor(Math.random() * additionalWishes.length)];
+    msgElement.innerText = randomWish;
+    createConfetti();
+}
+
+function toggleMusic(){
+    if(music.paused){music.play();}
+    else{music.pause();}
+}
+
+function startTypewriter(){
+    const message="Timi mero life ko tyo part hau jun bina sabai adhuro lagxa. Timi sangai huda jindagi sajilo ra ramailo lagxa. Ma timilai dherai maya garxu. 'Distance is just a test to see how far love can travel.' Ek din hami bhetney xau , Ani tyo din paxi hami kailey xutiney xainau . Timro harek sapana pura hos ra hami sadai yesari nai sangai rahun. Happy Birthday, Jyoti! ❤️";
+    let i=0;
+    const container=document.getElementById("typewriter");
+    function type(){
+        if(i<message.length){
+            container.innerHTML+=message.charAt(i);
+            i++;
+            setTimeout(type,50);
+        }
+    }
+    type();
+}
+
+function createBalloons(){
+    const colors = ['#ff4d6d', '#ffd700', '#ffb3c1', '#00f2ff', '#b2ff59'];
+    setInterval(()=>{
+        let b=document.createElement("div");
+        b.className="balloon";
+        b.innerHTML="🎈";
+        b.style.left=Math.random()*100+"vw";
+        b.style.color = colors[Math.floor(Math.random()*colors.length)];
+        b.style.filter = `hue-rotate(${Math.random()*360}deg)`;
+        document.body.appendChild(b);
+        setTimeout(()=>b.remove(),8000);
+    },600);
+}
+
+function createConfetti() {
+    for(let i=0; i<100; i++) {
+        let c = document.createElement("div");
+        c.className = "confetti";
+        c.style.left = Math.random()*100+"vw";
+        c.style.top = "-10px";
+        c.style.backgroundColor = `hsl(${Math.random()*360}, 100%, 50%)`;
+        c.style.transform = `rotate(${Math.random()*360}deg)`;
+        document.body.appendChild(c);
+        
+        let anime = c.animate([
+            { transform: `translateY(0) rotate(0deg)`, opacity: 1 },
+            { transform: `translateY(100vh) rotate(720deg)`, opacity: 0 }
+        ], { duration: 3000 + Math.random()*2000 });
+        
+        anime.onfinish = () => c.remove();
+    }
+}
+</script>
+
+</body>
+</html>
